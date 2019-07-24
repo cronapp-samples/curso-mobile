@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.CronapiCloud;
 import cronapi.CronapiSearchable;
 
 
@@ -57,6 +58,14 @@ public class Livro implements Serializable {
   @CronapiSearchable
   
   private java.lang.String isbn;
+
+  /**
+  * @generated
+  */
+  @Column(name = "foto", nullable = true, unique = false, insertable=true, updatable=true)
+  @CronapiCloud(type = "dropbox", value="LjjFEx-qJeUAAAAAAAACwrVUG6hxEzJjW-OtO5uVno5mEqudVeZRt0M0YlrhoZoB")
+  
+  private java.lang.String foto;
 
   /**
    * Construtor
@@ -143,6 +152,26 @@ public class Livro implements Serializable {
    */
   public Livro setIsbn(java.lang.String isbn){
     this.isbn = isbn;
+    return this;
+  }
+
+  /**
+   * Obtém foto
+   * return foto
+   * @generated
+   */
+  
+  public java.lang.String getFoto(){
+    return this.foto;
+  }
+
+  /**
+   * Define foto
+   * @param foto foto
+   * @generated
+   */
+  public Livro setFoto(java.lang.String foto){
+    this.foto = foto;
     return this;
   }
 
