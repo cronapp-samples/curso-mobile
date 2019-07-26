@@ -1,0 +1,15 @@
+<div id="starter" ng-init="" ng-destroy="" data-component="crn-start" screen-params="[{'key':'idLivro','value':''},{'key':'nomeLivro','value':''}]">
+  <ion-view class="pane"> 
+    <ion-header-bar align-title="center" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar"> 
+      <div class="buttons buttons-left header-item"> 
+        <button class="button button-clear" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button> 
+      </div> 
+      <h1 class="title">Avaliar</h1> 
+      <div class="buttons buttons-right header-item"> 
+        <button class="button button-clear" menu-toggle="right" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button> 
+      </div> 
+    </ion-header-bar> 
+    <ion-content data-component="crn-ion-content" class="scroll-content has-header"> 
+    <h2 xattr-position="text-center" class="text-center component-holder" data-component="crn-label" id="crn-label-livro">{{params.nomeLivro}}</h2><div class="component-holder ng-binding ng-scope" data-component="crn-rating" id="crn-rating-1026791"><cronapp-rating ng-model="vars.nota" icon-off="ion ion-android-star-outline"><i style="font-size: 200%" class="component-holder ion ion-android-star energized" xattr-theme="energized"></i> <i style="font-size: 200%" class="component-holder ion ion-android-star energized" xattr-theme="energized"></i> <i style="font-size: 200%" class="component-holder ion ion-android-star energized" xattr-theme="energized"></i> <i style="font-size: 200%" class="component-holder ion ion-android-star energized" xattr-theme="energized"></i> <i style="font-size: 200%" class="component-holder ion ion-android-star energized" xattr-theme="energized"></i></cronapp-rating></div><textarea id="crn-textarea-333491" ng-model="vars.comentario" maxlength="300" style="resize:none;" resize="none" class="col item item-input component-holder" rows="5" placeholder="Por favor comente..." data-component="crn-textarea"></textarea><button class="button button-block component-holder button-balanced" type="submit" xattr-fullsize="button-block" xattr-theme="button-balanced" ng-click="cronapi.server('blockly.AvaliacaoLivro.Inserir').run(vars.nota)" data-component="crn-button" id="crn-button-606055"><i class="ion ion-home"></i> <span>Avaliar</span></button></ion-content> 
+  </ion-view>
+</div>

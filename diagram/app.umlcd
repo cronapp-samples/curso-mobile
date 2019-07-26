@@ -691,7 +691,7 @@
           "stroke": "#C2C2C2",
           "stroke-width": 1,
           "fill": "#F0F0F0",
-          "height": 130,
+          "height": 150,
           "transform": "translate(0,50)"
         },
         ".uml-class-methods-rect": {
@@ -699,7 +699,7 @@
           "stroke-width": 1,
           "fill": "#F0F0F0",
           "height": 30,
-          "transform": "translate(0,180)"
+          "transform": "translate(0,200)"
         },
         ".uml-class-name-text": {
           "ref": ".uml-class-name-rect",
@@ -720,16 +720,16 @@
           "fill": "#666",
           "font-size": 11,
           "font-family": "Arial",
-          "text": "id\nnome\nautor\nisbn\nfoto\n"
+          "text": "id\nnome\nautor\nisbn\nfoto\nlat\n"
         },
         ".uml-class-attrs-value": {
           "ref": ".uml-class-attrs-rect",
           "ref-y": 15,
-          "ref-x": 62.6875,
+          "ref-x": 62.53125,
           "fill": "#0066FF",
           "font-size": 11,
           "font-family": "Arial",
-          "text": "Texto\nTexto\nTexto\nTexto\nImagem no Dropbox\n"
+          "text": "Texto\nTexto\nTexto\nTexto\nImagem no Dropbox\nDecimal Grande\n"
         },
         ".uml-class-methods-text": {
           "ref": ".uml-class-methods-rect",
@@ -751,16 +751,17 @@
         "nome:java.lang.String",
         "autor:java.lang.String",
         "isbn:java.lang.String",
-        "foto:Image Upload (to Dropbox)"
+        "foto:Image Upload (to Dropbox)",
+        "lat:java.math.BigDecimal"
       ],
       "methods": [],
       "position": {
-        "x": 395,
-        "y": 298.9999694824219
+        "x": 396,
+        "y": 298
       },
       "size": {
-        "width": 180.21875,
-        "height": 140.8545379638672
+        "width": 180.703125,
+        "height": 151.31351470947266
       },
       "angle": 0,
       "multitenantContextJsonIgnore": "false",
@@ -875,6 +876,29 @@
           "dbScale": "",
           "dbDefaultValue": "",
           "label": "Foto",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false
+        },
+        {
+          "name": "lat",
+          "type": "java.math.BigDecimal",
+          "dbName": "lat",
+          "dbLength": 15,
+          "dbPrecision": 15,
+          "dbScale": 10,
+          "dbDefaultValue": "",
+          "label": "Lat",
           "mask": "",
           "isPrimaryKey": false,
           "isUniqueKey": false,
@@ -1175,6 +1199,239 @@
         }
       },
       "queries": []
+    },
+    {
+      "type": "uml.Class",
+      "attrs": {
+        "rect": {
+          "width": 235,
+          "stroke": "yellow",
+          "stroke-width": 2
+        },
+        ".uml-class-name-rect": {
+          "stroke": "#C2C2C2",
+          "stroke-width": 1,
+          "fill": "#F0F0F0",
+          "height": 50,
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-attrs-rect": {
+          "stroke": "#C2C2C2",
+          "stroke-width": 1,
+          "fill": "#F0F0F0",
+          "height": 110,
+          "transform": "translate(0,50)"
+        },
+        ".uml-class-methods-rect": {
+          "stroke": "#C2C2C2",
+          "stroke-width": 1,
+          "fill": "#F0F0F0",
+          "height": 30,
+          "transform": "translate(0,160)"
+        },
+        ".uml-class-name-text": {
+          "ref": ".uml-class-name-rect",
+          "ref-y": 0.5,
+          "ref-x": 0.5,
+          "text-anchor": "middle",
+          "y-alignment": "middle",
+          "fill": "#000",
+          "font-size": 12,
+          "font-family": "Arial",
+          "text": "Avaliacao",
+          "font-weight": "bold"
+        },
+        ".uml-class-attrs-text": {
+          "ref": ".uml-class-attrs-rect",
+          "ref-y": 15,
+          "ref-x": 15,
+          "fill": "#666",
+          "font-size": 11,
+          "font-family": "Arial",
+          "text": "id\nnota\ncomentario\nlivro\n"
+        },
+        ".uml-class-attrs-value": {
+          "ref": ".uml-class-attrs-rect",
+          "ref-y": 15,
+          "ref-x": 88.421875,
+          "fill": "#0066FF",
+          "font-size": 11,
+          "font-family": "Arial",
+          "text": "java.lang.String\njava.lang.Integer\njava.lang.String\nLivro\n"
+        },
+        ".uml-class-methods-text": {
+          "ref": ".uml-class-methods-rect",
+          "ref-y": 15,
+          "ref-x": 15,
+          "fill": "#0066FF",
+          "font-size": 11,
+          "font-family": "Arial",
+          "text": ""
+        },
+        ".": {
+          "fill": "#ffffff",
+          "stroke": "none"
+        }
+      },
+      "name": "Avaliacao",
+      "attributes": [
+        "id:java.lang.String",
+        "nota:java.lang.Integer",
+        "comentario:java.lang.String",
+        "livro:Livro"
+      ],
+      "methods": [],
+      "position": {
+        "x": 406,
+        "y": 520
+      },
+      "size": {
+        "width": 137,
+        "height": 129.54235076904297
+      },
+      "angle": 0,
+      "realName": "",
+      "role": "Auto",
+      "generateView": "Auto",
+      "isRest": "true",
+      "id": "4afca75c-add3-46bd-84cb-851325d75d8a",
+      "modelType": "Table",
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "id",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false
+        },
+        {
+          "name": "nota",
+          "type": "java.lang.Integer",
+          "dbName": "nota",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Nota",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false
+        },
+        {
+          "name": "comentario",
+          "type": "java.lang.String",
+          "dbName": "comentario",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Comentario",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false
+        },
+        {
+          "name": "livro",
+          "type": "Livro",
+          "dbName": "fk_livro",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "multitenantContext": "",
+          "pkType": "",
+          "isIgnore": false,
+          "isTransien": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false
+        }
+      ],
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "z": 18,
+      "queries": []
+    },
+    {
+      "type": "uml.Composition",
+      "relationFields": [
+        "livro:target"
+      ],
+      "associationType": "Association",
+      "id": "9b2c46b6-e877-4228-86cd-48618768b8eb",
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "target": {
+        "id": "4afca75c-add3-46bd-84cb-851325d75d8a"
+      },
+      "source": {
+        "id": "1764eb1a-0e1b-436b-b9d9-49b003bea163"
+      },
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "z": 19,
+      "attrs": {
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        },
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        }
+      },
+      "queries": []
     }
   ],
   "selectedGroup": "1d7f906f-a526-482d-aaf4-08d227ae8c18",
@@ -1191,6 +1448,7 @@
       "name": "",
       "id": "1d7f906f-a526-482d-aaf4-08d227ae8c18",
       "cells": [
+        "4afca75c-add3-46bd-84cb-851325d75d8a",
         "d2e50f97-0b9e-4037-94ba-af64568af247",
         "1df87f56-c5ba-47f5-8e68-82931f49b989",
         "d92238a3-a37d-4cc6-a543-d0687dc207cd",

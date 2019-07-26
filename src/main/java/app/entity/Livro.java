@@ -68,6 +68,13 @@ public class Livro implements Serializable {
   private java.lang.String foto;
 
   /**
+  * @generated
+  */
+  @Column(name = "lat", nullable = true, unique = false, length=15, precision=15, scale=10, insertable=true, updatable=true)
+  
+  private java.math.BigDecimal lat;
+
+  /**
    * Construtor
    * @generated
    */
@@ -172,6 +179,26 @@ public class Livro implements Serializable {
    */
   public Livro setFoto(java.lang.String foto){
     this.foto = foto;
+    return this;
+  }
+
+  /**
+   * Obtém lat
+   * return lat
+   * @generated
+   */
+  
+  public java.math.BigDecimal getLat(){
+    return this.lat;
+  }
+
+  /**
+   * Define lat
+   * @param lat lat
+   * @generated
+   */
+  public Livro setLat(java.math.BigDecimal lat){
+    this.lat = lat;
     return this;
   }
 
